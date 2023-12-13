@@ -1,10 +1,13 @@
 {
     "name": "fishpig/magento2-remove-captcha",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "replace": {
         "magento/module-captcha": "*"
     },
     "autoload": {
+        "files": [
+            "registration.php"
+        ],
         "psr-4": {
             "Magento\\Captcha\\": "Mock/Magento/Captcha"
         }
