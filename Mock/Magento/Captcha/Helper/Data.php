@@ -41,9 +41,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      *
      */
+    private $defaultModelFacory = null;
+
+    /**
+     *
+     */
+    public function __construct(
+        \Magento\Framework\App\Helper\Context $context,
+        \Magento\Captcha\Model\DefaultModelFactory $defaultModelFacory
+    ) {
+        $this->defaultModelFacory = $defaultModelFacory;
+        parent::__construct($context);
+    }
+    /**
+     *
+     */
     public function getCaptcha($formId)
     {
-        return null;
+        return $this->defaultModelFacory->create();
     }
 
     /**

@@ -14,8 +14,6 @@ use Magento\Captcha\Api\CaptchaConfigPostProcessorInterface;
  */
 class CaptchaConfigPostProcessorComposite implements CaptchaConfigPostProcessorInterface
 {
-
-
     /**
      *
      */
